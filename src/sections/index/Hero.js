@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { Link } from "gatsby";
 import styled from "styled-components";
 import { Container, Row, Col } from "react-bootstrap";
 
@@ -99,15 +100,18 @@ const Hero = () => {
 									pr={5}
 									pt={[4, null]}>
 									<Title variant="hero">
-										Incididunt non sit ullamco ipsum.
+										DM Fitness and Performance
 									</Title>
 									<Text mb={4}>
-										Laboris excepteur laborum consequat esse
-										nisi do voluptate Lorem nostrud do
-										adipisicing nisi adipisicing veniam.
+										Channel your hard work and dedication
+										into professionally designed,
+										science-backed training, to unlock your
+										fitness and performance potential.
 									</Text>
 									<div className="d-flex flex-column align-items-start">
-										<Button mb={3}>Button text</Button>
+										<Link to="/contact">
+											<Button mb={3}>Get Started</Button>
+										</Link>
 									</div>
 								</Box>
 							</div>

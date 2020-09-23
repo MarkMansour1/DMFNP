@@ -8,7 +8,7 @@ const Logo = ({ white, height, className = "", ...rest }) => {
 	return (
 		<Link to="/" className={`${className}`} {...rest}>
 			{/* {white ? <img src={logoWhite} alt="" /> : <img src={logo} alt="" />} */}
-			<span className={`h4 text-${white ? "white" : "dark"}`}>LOGO</span>
+			<span className={`h4 text-${white ? "white" : "dark"}`}>DMFNP</span>
 		</Link>
 	);
 };

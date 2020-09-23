@@ -78,12 +78,12 @@ const Footer = ({ isDark = true }) => {
 							padding: 80px 0 60px;
 						`}>
 						<Row className="justify-content-center">
-							<Col lg="2" md="4">
+							<Col lg="3" md="4">
 								<Logo white={isDark} />
 							</Col>
-							<Col lg="10" md="8" className="mt-5 mt-lg-0">
+							<Col lg="9" md="8" className="mt-5 mt-lg-0">
 								<Row>
-									<Col xs="6" lg="3">
+									<Col xs="6" lg="4">
 										<div className="mb-5 mb-lg-4">
 											<TitleStyled
 												variant="card"
@@ -122,7 +122,7 @@ const Footer = ({ isDark = true }) => {
 											</UlStyled>
 										</div>
 									</Col>
-									<Col xs="6" lg="3">
+									<Col xs="6" lg="4">
 										<div className="mb-5 mb-lg-4">
 											<TitleStyled
 												variant="card"
@@ -161,46 +161,7 @@ const Footer = ({ isDark = true }) => {
 											</UlStyled>
 										</div>
 									</Col>
-									<Col xs="6" lg="3">
-										<div className="mb-5 mb-lg-4">
-											<TitleStyled
-												variant="card"
-												color={
-													isDark ? "light" : "dark"
-												}>
-												Header
-											</TitleStyled>
-											<UlStyled
-												color={
-													isDark
-														? "lightShade"
-														: "darkShade"
-												}>
-												<li>
-													<a
-														href="/#"
-														target="_blank">
-														Footer Link
-													</a>
-												</li>
-												<li>
-													<a
-														href="/#"
-														target="_blank">
-														Footer Link
-													</a>
-												</li>
-												<li>
-													<a
-														href="/#"
-														target="_blank">
-														Footer Link
-													</a>
-												</li>
-											</UlStyled>
-										</div>
-									</Col>
-									<Col xs="6" lg="3">
+									<Col xs="6" lg="4">
 										<div className="mb-lg-4">
 											<TitleStyled
 												variant="card"
@@ -249,18 +210,16 @@ const Footer = ({ isDark = true }) => {
 								sm="6"
 								className="text-sm-left text-center mb-2 mb-sm-0">
 								<p>
-									&copy; {new Date().getFullYear()} Daniel
-									Mansour. All Rights Reserved.
+									&copy; {new Date().getFullYear()} DM Fitness
+									and Performance. All Rights Reserved.
 								</p>
 							</Col>
 							<Col sm="6" className="text-sm-right text-center">
-								<p>
-									<a
-										href="https://captivastudio.com"
-										target="_blank">
-										Website by Captiva
-									</a>
-								</p>
+								<a
+									href="https://captivastudio.com"
+									target="_blank">
+									<p>Website by Captiva</p>
+								</a>
 							</Col>
 						</Row>
 					</CopyRightArea>

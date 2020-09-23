@@ -65,7 +65,8 @@ const Contact = () => (
 			bg="#f7f7fb"
 			pt={[0, null, null, 4]}
 			pb={6}
-			className="position-relative">
+			className="position-relative"
+			id="contact">
 			<Shape>
 				<img src={imgShape} alt="" className="w-100 img-fluid" />
 			</Shape>
@@ -99,7 +100,7 @@ const Contact = () => (
 									placeholder="Email address"
 								/>
 							</Box>
-							<Box mb={4}>
+							{/* <Box mb={4}>
 								<Select
 									id="serviceput"
 									name="serviceput"
@@ -123,7 +124,7 @@ const Contact = () => (
 										},
 									]}
 								/>
-							</Box>
+							</Box> */}
 							<Box mb={4} className="position-relative">
 								<Input
 									as="textarea"

@@ -30,7 +30,10 @@ const Contact1 = () => {
 										alert("sent");
 									}}>
 									<Box mb={5}>
-										<Title>Get in touch.</Title>
+										<Title>
+											Don’t leave results to chance -
+											start today!
+										</Title>
 									</Box>
 									<Box mb={4}>
 										<Input

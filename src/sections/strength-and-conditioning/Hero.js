@@ -47,7 +47,9 @@ const Hero = () => {
 									data-aos-duration="1500"
 									data-aos-once="true"
 									data-aos-delay="1300">
-									<Button>Button text</Button>
+									<a href="#contact">
+										<Button>Get Started</Button>
+									</a>
 								</Box>
 							</Box>
 						</Col>

@@ -8,11 +8,11 @@ export const menuItems = [
 		label: "About",
 	},
 	{
-		name: "pt",
+		name: "personal-training",
 		label: "Personal Training",
 	},
 	{
-		name: "sandc",
+		name: "strength-and-conditioning",
 		label: "Strength & Conditioning",
 	},
 	// {

@@ -41,26 +41,28 @@ const Fact = () => (
 					</Col>
 					<Col lg="7" className="pr-lg-5">
 						<div className="author-text">
-							<Title variant="card" fontSize="24px">
-								Economist, S&C Coach, Ex Greenford Trialist
-							</Title>
+							{/* <Title variant="card" fontSize="24px">
+								Officia aliqua cupidatat.
+							</Title> */}
+							<Text variant="small">
+								Having worked in the fitness industry for
+								several years now, my background is in personal
+								training and competitive sport.
+							</Text>
 							<Text variant="small" my={4}>
-								Nostrud sint ad aute elit eiusmod ut qui ipsum
-								ex. Tempor pariatur tempor duis anim incididunt.
-								Et consectetur irure dolore voluptate mollit
-								mollit commodo enim elit fugiat nulla. Fugiat
-								consectetur consequat quis minim eiusmod nisi
-								enim velit sint consequat.
+								Playing semi professional football, studying a
+								Strength and conditioning MSc and coaching a
+								wide variety of clients has led to my approach
+								of merging elements of the fitness and
+								performance industries to provide the best of
+								both.
+							</Text>
+							<Text variant="small" my={4}>
+								My clients get the professional standards of
+								elite level training, without losing the care
+								and attention of a personal trainer.
 							</Text>
 							<Text variant="small">
-								Nostrud adipisicing sint ut magna duis elit
-								laborum pariatur et laboris id. Cupidatat
-								adipisicing aute consequat duis ullamco aliquip
-								exercitation exercitation sit nisi officia.
-								Magna consequat anim mollit deserunt id.
-								Deserunt deserunt quis ex velit.
-							</Text>
-							<Text variant="small" mt={4}>
 								<Link to="/contact">
 									<Span color="secondary">Contact Me</Span>
 								</Link>

@@ -11,7 +11,9 @@ const CTA = () => (
 				<Row>
 					<Col lg="8" xl="7">
 						<div>
-							<Title color="light">Call to action.</Title>
+							<Title color="light">
+								Don’t leave results to chance!
+							</Title>
 						</div>
 					</Col>
 					<Col
@@ -21,7 +23,7 @@ const CTA = () => (
 						<div>
 							<Link to="/contact">
 								<Button bg="warning" color="dark">
-									Button text
+									Start Today
 								</Button>
 							</Link>
 						</div>

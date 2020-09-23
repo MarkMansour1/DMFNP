@@ -98,7 +98,9 @@ const Hero = () => {
 									py={[null, null, null, 5]}
 									pr={5}
 									pt={[4, null]}>
-									<Title variant="hero">Fitness</Title>
+									<Title variant="hero">
+										Personal Training
+									</Title>
 									<Text mb={4}>
 										Enim minim nostrud duis et dolore
 										excepteur ea aute magna reprehenderit.
@@ -106,7 +108,9 @@ const Hero = () => {
 										deserunt excepteur culpa.
 									</Text>
 									<div className="d-flex flex-column align-items-start">
-										<Button mb={3}>Button text</Button>
+										<a href="#contact">
+											<Button mb={3}>Get Started</Button>
+										</a>
 									</div>
 								</Box>
 							</div>

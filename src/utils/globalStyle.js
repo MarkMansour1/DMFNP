@@ -1,7 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 
 const globalStyle = createGlobalStyle`
-  body {
+   body {
     background-color: ${({ theme }) => theme.colors.bg} !important;
 
     color: ${({ theme }) => theme.colors.text} !important;
@@ -33,16 +33,20 @@ const globalStyle = createGlobalStyle`
     }
   }
 
-    input::-webkit-outer-spin-button,
-    input::-webkit-inner-spin-button {
-      /* display: none; <- Crashes Chrome on hover */
-      -webkit-appearance: none;
-      margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
-    }
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+  }
 
-    input[type="number"] {
-      -moz-appearance: textfield; /* Firefox */
-    }
+  input[type="number"] {
+    -moz-appearance: textfield; /* Firefox */
+  }
+
+  #contact {
+    scroll-margin-top: 125px;
+  }
 `;
 
 export default globalStyle;

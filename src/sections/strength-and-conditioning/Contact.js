@@ -62,7 +62,8 @@ const Contact = () => (
 			bg="dark"
 			pt={[0, null, null, 4]}
 			pb={6}
-			className="position-relative">
+			className="position-relative"
+			id="contact">
 			<Shape>
 				<img src={imgShape} alt="" className="w-100 img-fluid" />
 			</Shape>
@@ -81,7 +82,7 @@ const Contact = () => (
 						data-aos-delay="500">
 						<FormStyled>
 							<div className="mb-5 text-center">
-								<Title className="mb-2">Button text</Title>
+								<Title className="mb-2">Get Started</Title>
 								<Text>
 									Fill out the form and we'll be in touch
 									soon!
