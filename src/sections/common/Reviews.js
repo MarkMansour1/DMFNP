@@ -101,7 +101,7 @@ const Testimonial = (props) => {
 
 	return (
 		<>
-			<Section bg={props.white ? "white" : "#f7f7fb"}>
+			<Section bg={props.bg || "#f7f7fb"}>
 				<Container>
 					<Row className="justify-content-center">
 						<Col md="9" lg="6" className="text-center">

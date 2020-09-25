@@ -19,7 +19,7 @@ const About = () => {
 				</Hero> */}
 				<Content />
 				<Author />
-				<Reviews white={true} />
+				<Reviews bg="white" />
 				<CTA />
 			</PageWrapper>
 		</>

@@ -22,9 +22,7 @@ const CTA = () => (
 						className="d-flex align-items-center justify-content-lg-end mt-4 mt-lg-0">
 						<div>
 							<Link to="/contact">
-								<Button bg="warning" color="dark">
-									Start Today
-								</Button>
+								<Button>Start Today</Button>
 							</Link>
 						</div>
 					</Col>
