@@ -20,6 +20,7 @@ import GlobalContext from "../../context/GlobalContext";
 import GlobalStyle from "../../utils/globalStyle";
 
 import imgFavicon from "../../assets/favicon.png";
+import favicon from "../../img/icon.png";
 
 import "../../assets/fonts/fontawesome-5/webfonts/fa-brands-400.ttf";
 import "../../assets/fonts/fontawesome-5/webfonts/fa-regular-400.ttf";
@@ -126,7 +127,7 @@ const Layout = ({ children, pageContext }) => {
 				<GlobalStyle />
 				<Helmet>
 					<title>Daniel Mansour</title>
-					<link rel="icon" type="image/png" href={imgFavicon} />
+					<link rel="icon" type="image/png" href={favicon} />
 				</Helmet>
 				<Loader
 					id="loading"
@@ -154,7 +155,7 @@ const Layout = ({ children, pageContext }) => {
 				<GlobalStyle />
 				<Helmet>
 					<title>Daniel Mansour</title>
-					<link rel="icon" type="image/png" href={imgFavicon} />
+					<link rel="icon" type="image/png" href={favicon} />
 				</Helmet>
 				<Loader
 					id="loading"

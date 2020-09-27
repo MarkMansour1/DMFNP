@@ -5,7 +5,7 @@ import PageWrapper from "../components/PageWrapper";
 import Hero from "../sections/programs/Hero";
 import ProgramList from "../sections/programs/ProgramList";
 import Content from "../sections/programs/Content";
-import Testimonial from "../sections/programs/Testimonial";
+import Features from "../sections/programs/Features";
 import CTA from "../sections/programs/CTA";
 
 const Programs = () => {
@@ -13,8 +13,8 @@ const Programs = () => {
 		<>
 			<PageWrapper>
 				<Hero />
-				{/* <Testimonial /> */}
 				{/* <Content /> */}
+				{/* <Features /> */}
 				<ProgramList />
 				<CTA />
 			</PageWrapper>

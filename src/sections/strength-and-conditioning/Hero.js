@@ -25,7 +25,8 @@ const Hero = () => {
 									data-aos-duration="1500"
 									data-aos-once="true"
 									data-aos-delay="700"
-									className="d-md-none d-lg-block">
+									// className="d-md-none d-lg-block"
+									className="d-none">
 									Officia dolor aute magna id id cillum
 									tempor.
 								</Text>

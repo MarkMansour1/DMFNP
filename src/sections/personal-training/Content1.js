@@ -9,6 +9,11 @@ import imgC2 from "../../assets/image/jpeg/l7-content2-image-2.jpg";
 import imgC3 from "../../assets/image/jpeg/l7-content2-image-3.jpg";
 import imgC4 from "../../assets/image/jpeg/l7-content2-image-4.jpg";
 
+import img1 from "../../img/pt1.png";
+import img2 from "../../img/pt2.png";
+import img3 from "../../img/pt3.png";
+import img4 from "../../img/pt4.png";
+
 const SectionStyled = styled(Section)``;
 
 const SingleImage = styled(Box)`
@@ -32,7 +37,7 @@ const Content1 = () => {
 							<Box className="d-flex">
 								<SingleImage>
 									<img
-										src={imgC1}
+										src={img1}
 										alt=""
 										className="img-fluid"
 										data-aos="zoom-in"
@@ -40,7 +45,7 @@ const Content1 = () => {
 										data-aos-once="true"
 									/>
 									<img
-										src={imgC2}
+										src={img2}
 										alt=""
 										className="img-fluid"
 										data-aos="zoom-in"
@@ -51,7 +56,7 @@ const Content1 = () => {
 								</SingleImage>
 								<SingleImage>
 									<img
-										src={imgC3}
+										src={img3}
 										alt=""
 										className="img-fluid"
 										data-aos="zoom-in"
@@ -60,7 +65,7 @@ const Content1 = () => {
 										data-aos-once="true"
 									/>
 									<img
-										src={imgC4}
+										src={img4}
 										alt=""
 										className="img-fluid"
 										data-aos="zoom-in"
@@ -73,15 +78,25 @@ const Content1 = () => {
 						</Col>
 						<Col lg="6" md={9}>
 							<div>
-								<Title>
-									Sit labore quis &amp;{" "}
-									<br className="d-none d-sm-block d-md-none d-xl-block" />
-									non cillum duis.
-								</Title>
+								<Text className="mb-3">
+									Using a variety of methods each session will
+									push you, test you and grow you.
+								</Text>
+								<Text className="mb-3">
+									• Bodyweight methods such as calisthenics or
+									Pilates exercises can improve posture, core
+									strength and body control.
+								</Text>
+								<Text className="mb-3">
+									• High intensity intervals will have you
+									building lean muscle while shredding fat
+									every session
+								</Text>
 								<Text>
-									Id anim est reprehenderit ad exercitation
-									consectetur magna commodo voluptate ea
-									proident est consectetur.
+									• Strength and conditioning methods ensure
+									you can work around or even fix long term
+									injuries which previously held you back from
+									training.
 								</Text>
 							</div>
 						</Col>

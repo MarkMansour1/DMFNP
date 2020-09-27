@@ -11,6 +11,8 @@ import { device } from "../../utils";
 import imgHero from "../../assets/image/png/l6-hero-image.png";
 import imgAuthor from "../../assets/image/jpeg/l6-author-image.jpg";
 
+import featured from "../../img/featuredprogram.png";
+
 const ImgRight = styled(Box)`
 	max-width: 80%;
 	margin-left: -35px;
@@ -40,10 +42,10 @@ const ULStyled = styled.ul`
 			}
 		}
 		color: #19191b;
-		font-size: 21px;
-		font-weight: 500;
+		font-size: 18px;
+		font-weight: 400;
 		letter-spacing: -0.66px;
-		line-height: 50px;
+		line-height: 45px;
 		display: flex;
 		margin-bottom: 5px;
 
@@ -133,7 +135,7 @@ const Hero = () => {
 							data-aos-once="true">
 							<ImgRight>
 								<img
-									src={imgHero}
+									src={featured}
 									alt=""
 									className="img-fluid"
 								/>
@@ -147,22 +149,27 @@ const Hero = () => {
 								data-aos-once="true">
 								<Box pt={[4, null, null, 0]} pl={5}>
 									<Title>
-										Featured program name{" "}
-										<br className="d-none d-sm-block" />
+										Calisthenics for{" "}
+										<br className="d-none d-sm-block" />{" "}
+										beginners
 									</Title>
 									<Box mb={3}>
 										<ULStyled>
 											<li>
-												Laborum mollit Lorem Lorem
-												commodo.
+												First steps towards mastering
+												your bodyweight and unlocking
+												your potential strength
 											</li>
 											<li>
-												Nulla adipisicing aute et dolor
-												consequat et.
+												High intensity circuit style to
+												build lean muscle, while burning
+												fat
 											</li>
 											<li>
-												Dolor sit quis proident in
-												cillum sit nostrud magna.
+												Each session includes
+												rehabilitating exercises to fix
+												posture and mobility, freeing
+												you to move better
 											</li>
 										</ULStyled>
 									</Box>
@@ -175,7 +182,7 @@ const Hero = () => {
 											Need a custom program?{" "}
 											<Link to="/contact">
 												<Span color="secondary">
-													Button text
+													Click here
 												</Span>
 											</Link>
 										</Text>
@@ -188,7 +195,7 @@ const Hero = () => {
 			</Section>
 			<BoxStyled bg="#f6f6f8">
 				<Container>
-					<Row className="align-items-center justify-content-center position-relative">
+					<Row className="align-items-center justify-content-center position-relative d-none">
 						<Col lg="12" xl="10">
 							<AuthorWidget>
 								<AuthorImage

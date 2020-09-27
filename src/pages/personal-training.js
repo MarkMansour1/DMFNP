@@ -15,11 +15,11 @@ const PersonalTraining = () => {
 		<>
 			<PageWrapper>
 				<Hero />
-				<Features />
+				{/* <Features /> */}
 				<Content1 />
-				<Content2 />
 				<Pricing />
-				<Reviews />
+				{/* <Content2 /> */}
+				{/* <Reviews /> */}
 				<CTA />
 			</PageWrapper>
 		</>

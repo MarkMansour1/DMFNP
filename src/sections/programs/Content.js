@@ -1,71 +1,180 @@
 import React from "react";
 import styled from "styled-components";
 import { Container, Row, Col } from "react-bootstrap";
+import Slider from "react-slick";
+import { rgba } from "polished";
 
 import { Title, Section, Box, Text } from "../../components/Core";
-import { device } from "../../utils";
+import { device, breakpoints } from "../../utils";
 
 const SectionStyled = styled(Section)``;
 
-const ContentWidget = styled(Box)`
-	border-radius: 10px;
-	border: ${({ theme }) => `1px solid ${theme.colors.border}`};
-	background-color: ${({ theme }) => theme.colors.light};
-	padding: 20px;
-	min-width: 100%;
-	width: 100%;
-	min-height: 90px;
-	display: flex;
-	align-items: center;
+const SliderStyled = styled(Slider)`
+	position: relative;
 
-	@media ${device.xl} {
-		width: 360px;
-		min-width: 360px;
+	.slick-arrow {
+		position: absolute;
+		top: 50%;
+		font-size: 0;
+		height: 65px;
+		display: flex;
+		width: 65px;
+		background: ${({ theme }) => theme.colors.secondary};
+		transition: 0.4s;
+		border-radius: 500px;
+		transform: translate(-50%, -50%);
+		z-index: 999;
+		margin-top: -20px;
+		&::before {
+			position: absolute;
+			content: "";
+			font-family: "Font Awesome 5 Free";
+			font-weight: 900;
+			font-size: 20px;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			color: #fff;
+			transition: 0.4s;
+		}
+	}
+	.slick-arrow.slick-prev {
+		left: 0;
+		&:before {
+			content: "\f060";
+		}
+		@media ${device.md} {
+			/* margin-left: 60px; */
+		}
+	}
+
+	.slick-arrow.slick-next {
+		right: 0;
+		left: auto;
+		transform: translate(50%, -50%);
+		&:before {
+			content: "\f061";
+		}
+		@media ${device.md} {
+			/* margin-right: 60px; */
+		}
+	}
+
+	.slick-arrow:hover,
+	.slick-arrow:focus {
+		background: ${({ theme }) => theme.colors.light}!important;
+		color: ${({ theme }) => theme.colors.secondary}!important;
+		&:before {
+			color: ${({ theme }) => theme.colors.secondary}!important;
+		}
+	}
+`;
+
+const SliderItem = styled(Box)`
+	&:focus {
+		outline: none;
+	}
+`;
+
+const SliderCard = styled(Box)`
+	border-radius: 10px;
+	background: #fff;
+	overflow: hidden;
+	box-shadow: ${({ theme }) =>
+		`0 12px 34px -11px ${rgba(theme.colors.shadow, 0.125)}`};
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding-right: 30px;
+	padding-left: 30px;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	@media ${device.sm} {
+		padding-top: 90px;
+		padding-bottom: 90px;
 	}
 	@media ${device.md} {
-		min-height: 100%;
+		padding-right: 50px;
+		padding-left: 50px;
+		flex-direction: row;
+		align-items: center;
+	}
+	@media ${device.lg} {
+		margin: 60px 0 100px !important;
+		padding-right: 100px;
+		padding-left: 100px;
+	}
+	@media ${device.xl} {
+		padding-right: 120px;
+		padding-left: 120px;
 	}
 `;
 
-const ContentWidgetIcon = styled(Box)`
-	min-width: 30px;
-	max-width: 30px;
-	min-height: 30px;
-	max-height: 30px;
-	border-radius: 50%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	margin-right: 20px;
-	color: ${({ theme }) => theme.colors.light};
-	background-color: ${({ theme }) => theme.colors.secondary};
+const NumberBlock = styled(Box)`
+	min-width: 215px;
+	height: 213px;
+	border-radius: 8px;
+	background-color: #eae9f2;
+	text-align: center;
+	margin: 0 auto;
+	@media ${device.md} {
+		margin-left: 0;
+	}
+	span {
+		color: ${({ theme }) => theme.colors.ash};
+		font-size: 140px;
+		font-weight: 900;
+		letter-spacing: -4.38px;
+	}
 `;
 
-const ContentCard = ({ children = "" }) => {
-	return (
-		<ContentWidget>
-			<ContentWidgetIcon>
-				<i className="fas fa-check"></i>
-			</ContentWidgetIcon>
-			<div className="d-flex align-items-center">
-				<Title variant="card" mb={0}>
-					{children}
-				</Title>
-			</div>
-		</ContentWidget>
-	);
-};
+const SliderText = styled(Box)`
+	display: flex;
+	flex-direction: column;
 
-const Content = () => {
+	flex: auto;
+	padding-left: 30px;
+	padding-right: 30px;
+	@media ${device.sm} {
+		padding-left: 60px;
+		padding-right: 0;
+	}
+	@media ${device.md} {
+		padding-left: 85px;
+	}
+	@media ${device.lg} {
+		padding-left: 120px;
+	}
+`;
+
+const Testimonial = () => {
+	const slickSettings = {
+		dots: false,
+		infinite: true,
+		speed: 500,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: true,
+		responsive: [
+			{
+				breakpoint: breakpoints.lg,
+				settings: {
+					arrows: false,
+				},
+			},
+		],
+	};
+
 	return (
 		<>
-			{/* <!-- Content section --> */}
-			<SectionStyled bg="#f2f2f3">
+			{/* <!-- testimonial section --> */}
+			<SectionStyled bg="#f6f6f8" pb={["0px!important"]}>
 				<Container>
-					<Row className="justify-content-center mb-5">
-						<Col lg="9">
+					<Row className="justify-content-center mb-4">
+						<Col lg="10">
 							<div className="text-center">
-								<Title>Things you’ll learn</Title>
+								<Title>Chapters we’ve covered</Title>
 								<Text>
 									Create custom landing pages with Omega that
 									converts{" "}
@@ -76,107 +185,96 @@ const Content = () => {
 						</Col>
 					</Row>
 					<Row className="justify-content-center">
-						<Col
-							lg="4"
-							md="6"
-							className="mb-4"
-							data-aos="zoom-in"
-							data-aos-duration="750"
-							data-aos-once="true"
-							data-aos-delay="500">
-							<ContentCard>
-								How to improve yourself with small tasks.
-							</ContentCard>
-						</Col>
-						<Col
-							lg="4"
-							md="6"
-							className="mb-4"
-							data-aos="zoom-in"
-							data-aos-duration="750"
-							data-aos-once="true"
-							data-aos-delay="500">
-							<ContentCard>
-								How to utilize your time while working hard.
-							</ContentCard>
-						</Col>
-						<Col
-							lg="4"
-							md="6"
-							className="mb-4"
-							data-aos="zoom-in"
-							data-aos-duration="750"
-							data-aos-once="true"
-							data-aos-delay="500">
-							<ContentCard>How to think creatively.</ContentCard>
-						</Col>
-						<Col
-							lg="4"
-							md="6"
-							className="mb-4"
-							data-aos="zoom-in"
-							data-aos-duration="750"
-							data-aos-once="true"
-							data-aos-delay="500">
-							<ContentCard>
-								Solving your problems without hurting yourself.
-							</ContentCard>
-						</Col>
-						<Col
-							lg="4"
-							md="6"
-							className="mb-4"
-							data-aos="zoom-in"
-							data-aos-duration="750"
-							data-aos-once="true"
-							data-aos-delay="500">
-							<ContentCard>Understanding People 101.</ContentCard>
-						</Col>
-						<Col
-							lg="4"
-							md="6"
-							className="mb-4"
-							data-aos="zoom-in"
-							data-aos-duration="750"
-							data-aos-once="true"
-							data-aos-delay="500">
-							<ContentCard>
-								10 secrects to solve any problem easily.
-							</ContentCard>
-						</Col>
-						<Col
-							lg="4"
-							md="6"
-							className="mb-4"
-							data-aos="zoom-in"
-							data-aos-duration="750"
-							data-aos-once="true"
-							data-aos-delay="500">
-							<ContentCard>
-								Creating valuable goal for next 5 years.
-							</ContentCard>
-						</Col>
-						<Col
-							lg="4"
-							md="6"
-							className="mb-4"
-							data-aos="zoom-in"
-							data-aos-duration="750"
-							data-aos-once="true"
-							data-aos-delay="500">
-							<ContentCard>Making money smartly.</ContentCard>
-						</Col>
-						<Col
-							lg="4"
-							md="6"
-							className="mb-4"
-							data-aos="zoom-in"
-							data-aos-duration="750"
-							data-aos-once="true"
-							data-aos-delay="500">
-							<ContentCard>
-								Developing new skills fast and furious!
-							</ContentCard>
+						<Col lg="12">
+							<SliderStyled {...slickSettings}>
+								<SliderItem>
+									<SliderCard>
+										<NumberBlock>
+											<span>1</span>
+										</NumberBlock>
+										<SliderText>
+											<Text
+												variant="small"
+												color="secondary">
+												Chapter 01
+											</Text>
+											<Title
+												variant="card"
+												fontSize="24px"
+												mb={4}
+												mt={2}>
+												What is problem solving?
+											</Title>
+											<Text color="dark">
+												Create custom landing pages with
+												Omega that converts more
+												visitors than any website. With
+												lots of unique blocks, you can
+												easily build a page without
+												coding.
+											</Text>
+										</SliderText>
+									</SliderCard>
+								</SliderItem>
+								<SliderItem>
+									<SliderCard>
+										<NumberBlock>
+											<span>2</span>
+										</NumberBlock>
+										<SliderText>
+											<Text
+												variant="small"
+												color="secondary">
+												Chapter 02
+											</Text>
+											<Title
+												variant="card"
+												fontSize="24px"
+												mb={4}
+												mt={2}>
+												What is problem solving?
+											</Title>
+											<Text color="dark">
+												Create custom landing pages with
+												Omega that converts more
+												visitors than any website. With
+												lots of unique blocks, you can
+												easily build a page without
+												coding.
+											</Text>
+										</SliderText>
+									</SliderCard>
+								</SliderItem>
+								<SliderItem>
+									<SliderCard>
+										<NumberBlock>
+											<span>3</span>
+										</NumberBlock>
+										<SliderText>
+											<Text
+												variant="small"
+												color="secondary">
+												Chapter 03
+											</Text>
+											<Title
+												variant="card"
+												fontSize="24px"
+												mb={4}
+												mt={2}>
+												What is problem solving?
+											</Title>
+											<Text color="dark">
+												Create custom landing pages with
+												Omega that converts more
+												visitors than any website. With
+												lots of unique blocks, you can
+												easily build a page without
+												coding.
+											</Text>
+										</SliderText>
+									</SliderCard>
+								</SliderItem>
+							</SliderStyled>
 						</Col>
 					</Row>
 				</Container>
@@ -185,4 +283,4 @@ const Content = () => {
 	);
 };
 
-export default Content;
+export default Testimonial;

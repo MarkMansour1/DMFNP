@@ -26,12 +26,12 @@ const Author = styled(Box)`
 const Fact = () => (
 	<>
 		{/* <!-- Fact section 1 --> */}
-		<SectionStyled bg="#f6f6f8">
+		<SectionStyled>
 			<Container>
 				<Row>
-					<Col xs="12" className="mb-5">
+					<Col xs="12" className="my-5">
 						<div className="text-center">
-							<Title>About Daniel Mansour</Title>
+							<Title>About Daniel</Title>
 						</div>
 					</Col>
 					<Col lg="4" className="offset-lg-1 mb-4 mb-lg-0">

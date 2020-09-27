@@ -76,6 +76,7 @@ const Footer = ({ isDark = true }) => {
 					<Box
 						css={`
 							padding: 80px 0 60px;
+							display: none;
 						`}>
 						<Row className="justify-content-center">
 							<Col lg="3" md="4">

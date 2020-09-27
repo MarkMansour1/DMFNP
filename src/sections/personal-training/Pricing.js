@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "gatsby";
 import styled from "styled-components";
 import { Container, Row, Col } from "react-bootstrap";
 
@@ -75,11 +76,7 @@ const ButtonGroup = styled.div`
 			color: #fff;
 		}
 		& + .btn {
-			border-radius: 0;
-
-			& + .btn {
-				border-radius: 0 10px 10px 0;
-			}
+			border-radius: 0 10px 10px 0;
 		}
 	}
 `;
@@ -111,7 +108,7 @@ const Pricing = () => {
 					<Row className="text-md-center text-lg-left mb-5">
 						<Col lg="7" xl="6">
 							<div className="">
-								<Title>Pricing Plans</Title>
+								<Title>Pricing</Title>
 							</div>
 						</Col>
 						<Col
@@ -128,64 +125,89 @@ const Pricing = () => {
 									onKeyDown={() => {
 										setCount(1);
 									}}
-									tabIndex={0}>
-									Single Session
-								</span>
-								<span
-									role="button"
-									className={`btn ${count === 4 && "active"}`}
-									onClick={() => {
-										setCount(4);
-									}}
-									onKeyDown={() => {
-										setCount(4);
-									}}
 									tabIndex={1}>
-									4 Sessions
+									Outdoor Training
 								</span>
 								<span
 									role="button"
-									className={`btn ${count === 8 && "active"}`}
+									className={`btn ${count === 2 && "active"}`}
 									onClick={() => {
-										setCount(8);
+										setCount(2);
 									}}
 									onKeyDown={() => {
-										setCount(8);
+										setCount(2);
 									}}
 									tabIndex={2}>
-									8 Sessions
+									Studio Training
 								</span>
 							</ButtonGroup>
 						</Col>
 					</Row>
+					<div className="text-center">
+						{count === 1 ? (
+							<h5>
+								Sessions are held in your local park or garden.
+								Equipment will be provided.
+							</h5>
+						) : (
+							<h5>Private studio gym space. Fully equipped.</h5>
+						)}
+					</div>
 					<Row className="justify-content-center">
 						<Col lg="4" md="6" sm="8" className="mt-4">
 							<PricingCard>
 								<span className="small-title">
-									{count === 1
-										? "Single session"
-										: count === 4
-										? "4 sessions"
-										: "8 sessions"}
+									Single session
 								</span>
 								<h2 className="title mt-3 mb-4">
-									£
-									{count === 1
-										? "57"
-										: count === 4
-										? "54"
-										: "50"}
-									{count > 1 && (
-										<span className="time"> /session</span>
-									)}
+									{count === 1 ? "£40" : "£57"}
 								</h2>
 								<ULStyled>
 									<li>One hour session</li>
 									<li>1 to 1 coaching</li>
-									{count > 1 && <li>Custom training plan</li>}
 								</ULStyled>
 								<Box className="mt-5">
-									<ButtonStyled>Button text</ButtonStyled>
+									<Link to="/contact">
+										<ButtonStyled>Get Started</ButtonStyled>
+									</Link>
+								</Box>
+							</PricingCard>
+						</Col>
+						<Col lg="4" md="6" sm="8" className="mt-4">
+							<PricingCard>
+								<span className="small-title">4 sessions</span>
+								<h2 className="title mt-3 mb-4">
+									{count === 1 ? "£37" : "£54"}
+									<span className="time"> /session</span>
+								</h2>
+								<ULStyled>
+									<li>4x One hour sessions</li>
+									<li>1 to 1 coaching</li>
+									<li>Custom training plan</li>
+								</ULStyled>
+								<Box className="mt-5">
+									<Link to="/contact">
+										<ButtonStyled>Get Started</ButtonStyled>
+									</Link>
+								</Box>
+							</PricingCard>
+						</Col>
+						<Col lg="4" md="6" sm="8" className="mt-4">
+							<PricingCard>
+								<span className="small-title">8 sessions</span>
+								<h2 className="title mt-3 mb-4">
+									{count === 1 ? "£33" : "£50"}
+									<span className="time"> /session</span>
+								</h2>
+								<ULStyled>
+									<li>8x One hour sessions</li>
+									<li>1 to 1 coaching</li>
+									<li>Custom training plan</li>
+								</ULStyled>
+								<Box className="mt-5">
+									<Link to="/contact">
+										<ButtonStyled>Get Started</ButtonStyled>
+									</Link>
 								</Box>
 							</PricingCard>
 						</Col>

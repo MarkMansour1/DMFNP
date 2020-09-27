@@ -72,20 +72,20 @@ const Content = () => {
 			<SectionStyled bg="dark">
 				<Container>
 					<Row className="justify-content-center mb-5">
-						<Col lg="10">
+						<Col lg="11">
 							<div className="text-center">
 								<Title color="light">
-									Laborum et{" "}
+									Sport specific
 									<Span color="secondary">
-										dolore sint anim
-									</Span>{" "}
-									duis commodo en ut ullamco ipsum. Aliqua
-									duis nulla magna.
+										{" physical development "}
+									</Span>
+									for all athletes - from recreational amateur
+									to elite professional.
 								</Title>
 							</div>
 						</Col>
 					</Row>
-					<Row className="justify-content-center">
+					<Row className="justify-content-center d-none">
 						<Col
 							lg="4"
 							md="6"

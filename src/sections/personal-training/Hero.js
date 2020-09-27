@@ -102,10 +102,9 @@ const Hero = () => {
 										Personal Training
 									</Title>
 									<Text mb={4}>
-										Enim minim nostrud duis et dolore
-										excepteur ea aute magna reprehenderit.
-										Exercitation minim cillum labore officia
-										deserunt excepteur culpa.
+										Individual training tailored to you!
+										Pushing you every step of the way
+										towards the best version of yourself.
 									</Text>
 									<div className="d-flex flex-column align-items-start">
 										<a href="#contact">

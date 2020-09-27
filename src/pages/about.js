@@ -17,9 +17,9 @@ const About = () => {
 					enim qui. Qui laborum irure consequat cillum laboris ipsum
 					id aliquip proident.
 				</Hero> */}
-				<Content />
+				{/* <Content /> */}
 				<Author />
-				<Reviews bg="white" />
+				{/* <Reviews /> */}
 				<CTA />
 			</PageWrapper>
 		</>

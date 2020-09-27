@@ -14,10 +14,10 @@ const StrengthAndConditioning = () => {
 		<>
 			<PageWrapper headerDark footerDark>
 				<Hero />
-				<Features />
 				<Content1 />
-				<Content2 />
-				<Content3 />
+				<Features />
+				{/* <Content2 /> */}
+				{/* <Content3 /> */}
 				<CTA />
 			</PageWrapper>
 		</>
