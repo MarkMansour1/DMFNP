@@ -8,6 +8,10 @@ export const menuItems = [
 		label: "About",
 	},
 	{
+		name: "custom-programs",
+		label: "Custom Programs",
+	},
+	{
 		name: "personal-training",
 		label: "Personal Training",
 	},

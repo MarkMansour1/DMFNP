@@ -180,7 +180,7 @@ const Hero = () => {
 											color="ash"
 											fontWeight={500}>
 											Need a custom program?{" "}
-											<Link to="/contact">
+											<Link to="/custom-programs">
 												<Span color="secondary">
 													Click here
 												</Span>

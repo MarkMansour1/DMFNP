@@ -50,7 +50,7 @@ const CTA = () => (
 						</Box>
 						<div className="text-center">
 							<Link to="/contact">
-								<Button>Contact Me</Button>
+								<Button>Get in touch</Button>
 							</Link>
 						</div>
 					</Col>

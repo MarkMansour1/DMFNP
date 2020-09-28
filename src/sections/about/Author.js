@@ -51,7 +51,7 @@ const Fact = () => (
 							</Text>
 							<Text variant="small" my={4}>
 								Playing semi professional football, studying a
-								Strength and conditioning MSc and coaching a
+								Strength and Conditioning MSc and coaching a
 								wide variety of clients has led to my approach
 								of merging elements of the fitness and
 								performance industries to provide the best of

@@ -93,7 +93,7 @@ const Content1 = () => {
 									every session
 								</Text>
 								<Text>
-									• Strength and conditioning methods ensure
+									• Strength and Conditioning methods ensure
 									you can work around or even fix long term
 									injuries which previously held you back from
 									training.

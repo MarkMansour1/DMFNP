@@ -11,7 +11,7 @@ import imgL1FeatureCurve from "../../assets/image/svg/l1-curve-feature.svg";
 
 import imgContentMobile from "../../assets/image/png/content-img1--mobile.webp";
 
-import img from "../../img/index1.png";
+import img from "../../img/custom.png";
 
 const ShapeTopRight = styled(Box)`
 	position: absolute;
@@ -74,58 +74,23 @@ const Feature = () => (
 				<img src={imgL1FeatureCurve} alt="" className="img-fluid" />
 			</ShapeBottmRight>
 			<Container>
-				<Row className="align-items-center">
-					<Col lg="5" md="9" sm="10" className="mb-5 mb-lg-0">
-						<div className="position-relative">
-							<div
-								data-aos="fade-down"
-								data-aos-duration="750"
-								data-aos-once="true">
-								<img src={img} alt="" className="img-fluid" />
-							</div>
-						</div>
+				<Row className="align-items-start">
+					<Col lg="8" xl="7">
+						<Title color="light">Custom Training Programs</Title>
+						<Text mb={4} color="light" opacity={0.9}>
+							Training tailored to your lifestyle and goals, with
+							continuous online support to keep you on track.
+						</Text>
 					</Col>
-					<Col lg="7">
-						<div
-							data-aos="fade-left"
-							data-aos-duration="750"
-							data-aos-once="true">
-							<div className="content-text pl-lg--50">
-								<div className="section-title">
-									<Title color="light">
-										Personal Training
-									</Title>
-									<Text color="light" mb={4}>
-										One to one personal training expertly
-										designed to fit with your schedule and
-										improve your lifestyle. Each session
-										will push you to your limits, and closer
-										to your goals.
-									</Text>
-								</div>
-								<div className="mt-5">
-									{/* <ContentCard
-										title="50+ Unique Design Blocks"
-										color="primary"
-										iconName="icon-cards-2"
-										mb={3}>
-										with Carefully Coded
-									</ContentCard>
-									<ContentCard
-										title="Mobile First Design
-"
-										color="secondary"
-										iconName="icon-phone-charging-3-2">
-										on Every Devices
-									</ContentCard> */}
-									<Link to="/personal-training">
-										<Button variant="outline" mt={3}>
-											Find out more
-										</Button>
-									</Link>
-								</div>
-							</div>
-						</div>
+					<Col
+						lg="4"
+						xl="5"
+						className="d-flex  justify-content-lg-end mt-4 mt-lg-0">
+						<Link to="/custom-programs">
+							<Button variant="outline" mt={5} mb={2}>
+								Find out more 
+							</Button>
+						</Link>
 					</Col>
 				</Row>
 			</Container>

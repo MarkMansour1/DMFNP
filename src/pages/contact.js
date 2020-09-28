@@ -14,8 +14,6 @@ import {
 
 import PageWrapper from "../components/PageWrapper";
 
-const FormStyled = styled.form``;
-
 const Contact1 = () => {
 	return (
 		<>
@@ -24,11 +22,16 @@ const Contact1 = () => {
 					<Container>
 						<Row className="align-items-center">
 							<Col lg="6">
-								<FormStyled
-									onSubmit={(e) => {
-										e.preventDefault();
-										alert("sent");
-									}}>
+								<form
+									name="contact"
+									method="POST"
+									action="/personal-training"
+									data-netlify="true">
+									<input
+										type="hidden"
+										name="form-name"
+										value="contact"
+									/>
 									<Box mb={5}>
 										<Title>
 											Don’t leave results to chance -
@@ -92,29 +95,22 @@ const Contact1 = () => {
 										borderRadius={10}>
 										Send Message
 									</Button>
-								</FormStyled>
+								</form>
 							</Col>
 							<Col
 								lg={5}
 								className="offset-lg-1 order-lg-2 mt-5 mt-lg-0 pt-lg-5">
 								<Box className="mb-5">
 									<Title variant="card" fontSize="24px">
-										Call us
+										Phone
 									</Title>
-									<Text>+44 123 456 789</Text>
+									<Text>+44 790 325 4513</Text>
 								</Box>
 								<Box className="mb-5">
 									<Title variant="card" fontSize="24px">
-										Email us
+										Email
 									</Title>
-									<Text>email@gmail.com</Text>
-								</Box>
-								<Box className="mb-5">
-									<Title variant="card" fontSize="24px">
-										Location
-									</Title>
-									<Text>34 Earl's Court Road</Text>
-									<Text>SW5 9LZ</Text>
+									<Text>danielmansour14@gmail.com</Text>
 								</Box>
 							</Col>
 						</Row>

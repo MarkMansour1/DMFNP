@@ -24,7 +24,7 @@ const CTA = () => (
 						xl="5"
 						className="d-flex align-items-center justify-content-lg-end mt-4 mt-md-0">
 						<div>
-							<Link to="/contact">
+							<Link to="/custom-programs">
 								<Button bg="warning" color="dark">
 									Click here
 								</Button>
