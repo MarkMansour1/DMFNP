@@ -9,72 +9,74 @@ import imgIcon from "../assets/image/png/thumbs-shape.png";
 import { Title, Text } from "../components/Core";
 
 const ContentIcon = styled.div`
-  width: 118px;
-  height: 118px;
-  background-color: ${({ theme }) => theme.colors.secondary};
-  border-radius: 500px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 48px;
+	width: 118px;
+	height: 118px;
+	background-color: ${({ theme }) => theme.colors.secondary};
+	border-radius: 500px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 48px;
 `;
 
 const ButtonStyled = styled.button`
-  min-width: 250px;
-  min-height: 60px;
-  border-radius: 10px;
-  border: ${({ theme }) => `1px solid ${theme.colors.primary}`};
-  color: ${({ theme }) => theme.colors.primary};
-  font-size: 21px;
-  font-weight: 500;
-  letter-spacing: -0.66px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background: transparent;
-  box-shadow: none;
-  outline: none;
-  padding-left: 20px;
-  padding-right: 20px;
-  transition: 0.4s;
-  &:hover,
-  &:focus {
-    background: ${({ theme }) => theme.colors.primary};
-    color: ${({ theme }) => theme.colors.light};
-    box-shadow: none;
-    outline: none;
-  }
+	min-width: 250px;
+	min-height: 60px;
+	border-radius: 10px;
+	border: ${({ theme }) => `1px solid ${theme.colors.primary}`};
+	color: ${({ theme }) => theme.colors.primary};
+	font-size: 21px;
+	font-weight: 500;
+	letter-spacing: -0.66px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	background: transparent;
+	box-shadow: none;
+	outline: none;
+	padding-left: 20px;
+	padding-right: 20px;
+	transition: 0.4s;
+	&:hover,
+	&:focus {
+		background: ${({ theme }) => theme.colors.primary};
+		color: ${({ theme }) => theme.colors.light};
+		box-shadow: none;
+		outline: none;
+	}
 `;
 
 const NotFoundPage = () => {
-  return (
-    <>
-      <PageWrapper footerDark>
-        <Section>
-          <div className="pt-5"></div>
-          <Container>
-            <div className="text-center">
-              <ContentIcon>
-                <img src={imgIcon} alt="" className="img-fluid" />
-              </ContentIcon>
-              <div>
-                <Title variant="hero">Thank You</Title>
-                <Text>
-                  The page you are looking for is not available or doesn’t
-                  <br className="d-none d-md-block" /> belong to this website!
-                </Text>
-              </div>
-              <div className="mt-5">
-                <Link to="/">
-                  <ButtonStyled>Go back to home</ButtonStyled>
-                </Link>
-              </div>
-            </div>
-          </Container>
-        </Section>
-      </PageWrapper>
-    </>
-  );
+	return (
+		<>
+			<PageWrapper footerDark>
+				<Section
+					style={{ height: "100vh" }}
+					className="d-flex align-items-center">
+					<Container>
+						<div className="text-center">
+							<ContentIcon>
+								<img
+									src={imgIcon}
+									alt=""
+									className="img-fluid"
+								/>
+							</ContentIcon>
+							<div>
+								<Title variant="hero">Thank You</Title>
+								<Text>Your message has been sent.</Text>
+							</div>
+							<div className="mt-5">
+								<Link to="/">
+									<ButtonStyled>Go back home</ButtonStyled>
+								</Link>
+							</div>
+						</div>
+					</Container>
+				</Section>
+			</PageWrapper>
+		</>
+	);
 };
 
 export default NotFoundPage;

@@ -25,7 +25,7 @@ const Contact1 = () => {
 								<form
 									name="contact"
 									method="POST"
-									action="/personal-training"
+									action="/thank-you"
 									data-netlify="true">
 									<input
 										type="hidden"
@@ -41,21 +41,23 @@ const Contact1 = () => {
 									<Box mb={4}>
 										<Input
 											type="text"
-											id="nameput"
+											id="name"
+											name="name"
 											placeholder="Your name"
 										/>
 									</Box>
 									<Box mb={4}>
 										<Input
 											type="email"
-											id="emailput"
+											id="email"
+											name="email"
 											placeholder="Your email"
 										/>
 									</Box>
 									<Box mb={4}>
 										<Select
-											id="serviceput"
-											name="serviceput"
+											id="service"
+											name="service"
 											options={[
 												{
 													value: "",
@@ -86,7 +88,8 @@ const Contact1 = () => {
 											as="textarea"
 											placeholder="Write your message here"
 											rows={4}
-											id="messageput"
+											id="message"
+											name="message"
 										/>
 									</Box>
 									<Button
