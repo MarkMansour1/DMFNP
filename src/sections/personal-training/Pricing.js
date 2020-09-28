@@ -147,10 +147,13 @@ const Pricing = () => {
 						{count === 1 ? (
 							<h5>
 								Sessions are held in your local park or garden.
-								Equipment will be provided.
+								Equipment provided.
 							</h5>
 						) : (
-							<h5>Private studio gym space. Fully equipped.</h5>
+							<h5>
+								Sessions are held in a private studio gym space.
+								Fully equipped.
+							</h5>
 						)}
 					</div>
 					<Row className="justify-content-center">
