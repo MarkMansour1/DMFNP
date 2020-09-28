@@ -111,21 +111,35 @@ const Content = () => {
 						</Col>
 					</Row>
 					<Row className="justify-content-center py-5">
-						<Col lg="6">
+						<Col lg="8">
 							<div className="text-center">
+								<h4 className="mb-4">6 week program</h4>
 								<table className="table table-bordered">
-									<tr>
-										<td>2 sessions per week</td>
-										<td>£60</td>
-									</tr>
-									<tr>
-										<td>3 sessions per week</td>
-										<td>£66</td>
-									</tr>
-									<tr>
-										<td>4 sessions per week</td>
-										<td>£70</td>
-									</tr>
+									<thead>
+										<tr>
+											<td style={{ width: "50%" }}>
+												Sessions per week
+											</td>
+
+											<td style={{ width: "50%" }}>
+												Total Program Price
+											</td>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>2 sessions</td>
+											<td>£60</td>
+										</tr>
+										<tr>
+											<td>3 sessions</td>
+											<td>£66</td>
+										</tr>
+										<tr>
+											<td>4 sessions</td>
+											<td>£70</td>
+										</tr>
+									</tbody>
 								</table>
 							</div>
 						</Col>
