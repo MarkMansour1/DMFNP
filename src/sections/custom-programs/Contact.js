@@ -14,8 +14,132 @@ import {
 } from "../../components/Core";
 
 import { device } from "../../utils";
-
 import imgShape from "../../assets/image/svg/contact-shape.svg";
+
+const Contact = () => (
+	<>
+		<BoxStyled
+			bg="#f7f7fb"
+			pt={[0, null, null, 4]}
+			pb={6}
+			className="position-relative"
+			id="contact">
+			<Shape>
+				<img src={imgShape} alt="" className="w-100 img-fluid" />
+			</Shape>
+			<Container
+				css={`
+					position: relative;
+					z-index: 10;
+				`}>
+				<Row className="justify-content-center">
+					<Col
+						lg="9"
+						xl="8"
+						data-aos="fade-up"
+						data-aos-duration="750"
+						data-aos-once="true"
+						data-aos-delay="500">
+						<FormStyled
+							name="customprogram"
+							method="POST"
+							action="/confirmation"
+							data-netlify="true">
+							<input
+								type="hidden"
+								name="form-name"
+								value="customprogram"
+							/>
+							<div className="mb-5 text-center">
+								<Title className="mb-2">Get started</Title>
+								<Text>
+									Fill out the form to get started with your
+									program design.
+								</Text>
+							</div>
+							<Box mb={3}>
+								<Input
+									type="text"
+									name="name"
+									placeholder="Your name"
+								/>
+							</Box>
+							<Box mb={3}>
+								<Input
+									type="email"
+									name="email"
+									placeholder="Email address"
+								/>
+							</Box>
+							<Box mb={3}>
+								<Input
+									type="text"
+									name="phone"
+									placeholder="Phone number"
+								/>
+							</Box>
+							<Box mb={3}>
+								<Select
+									id="sessions"
+									name="sessionsperweek"
+									options={[
+										{
+											value: "",
+											label:
+												"Number of sessions per week",
+											isDisabled: true,
+										},
+										{
+											value: "2-sessions",
+											label: "2 sessions / week",
+										},
+										{
+											value: "3-sessions",
+											label: "3 sessions / week",
+										},
+										{
+											value: "4-sessions",
+											label: "4 sessions / week",
+										},
+									]}
+								/>
+							</Box>
+							<Box mb={3}>
+								<Input
+									as="textarea"
+									name="methods"
+									placeholder="Preferred methods of training (e.g. weightlifting, pilates, calisthenics)"
+								/>
+							</Box>
+							<Box mb={3}>
+								<Input
+									as="textarea"
+									name="goals"
+									placeholder="End goals (e.g. muscle building, weight loss, posture correction)"
+								/>
+							</Box>
+							<Box mb={3}>
+								<Input
+									as="textarea"
+									name="barriers"
+									placeholder="Biggest barriers to training (e.g. limited training space, little free time)"
+								/>
+							</Box>
+							<Button
+								width="100%"
+								type="submit"
+								borderRadius={10}>
+								Send
+							</Button>
+						</FormStyled>
+					</Col>
+				</Row>
+			</Container>
+		</BoxStyled>
+	</>
+);
+
+export default Contact;
 
 const BoxStyled = styled(Box)`
 	border-top: 1px solid #e2e5e6;
@@ -58,91 +182,3 @@ const AForgot = styled.a`
 	color: ${({ theme }) => theme.colors.secondary} !important;
 	text-decoration: none !important;
 `;
-
-const Contact = () => (
-	<>
-		<BoxStyled
-			bg="#f7f7fb"
-			pt={[0, null, null, 4]}
-			pb={6}
-			className="position-relative"
-			id="contact">
-			<Shape>
-				<img src={imgShape} alt="" className="w-100 img-fluid" />
-			</Shape>
-			<Container
-				css={`
-					position: relative;
-					z-index: 10;
-				`}>
-				<Row className="justify-content-center">
-					<Col
-						lg="9"
-						xl="8"
-						data-aos="fade-up"
-						data-aos-duration="750"
-						data-aos-once="true"
-						data-aos-delay="500">
-						<FormStyled>
-							<div className="mb-5 text-center">
-								<Title className="mb-2">Get in touch</Title>
-								<Text>
-									Fill out the form and we'll be in touch
-									soon!
-								</Text>
-							</div>
-							<Box mb={3}>
-								<Input type="text" placeholder="Your name" />
-							</Box>
-							<Box mb={3}>
-								<Input
-									type="email"
-									placeholder="Email address"
-								/>
-							</Box>
-							{/* <Box mb={4}>
-								<Select
-									id="serviceput"
-									name="serviceput"
-									options={[
-										{
-											value: "",
-											label: "Number of sessions",
-											isDisabled: true,
-										},
-										{
-											value: "single-session",
-											label: "1 session",
-										},
-										{
-											value: "four-sessions",
-											label: "4 sessions",
-										},
-										{
-											value: "eight-sessions",
-											label: "8 sessions",
-										},
-									]}
-								/>
-							</Box> */}
-							<Box mb={4} className="position-relative">
-								<Input
-									as="textarea"
-									placeholder="Write your message here"
-								/>
-							</Box>
-							<Button
-								width="100%"
-								type="submit"
-								borderRadius={10}>
-								Send
-							</Button>
-						</FormStyled>
-					</Col>
-				</Row>
-			</Container>
-		</BoxStyled>
-	</>
-);
-
-export default Contact;

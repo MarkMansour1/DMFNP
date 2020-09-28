@@ -86,23 +86,47 @@ const Content = () => {
 					<Row className="justify-content-center mb-5">
 						<Col lg="7">
 							<div className="text-center">
-								<Text className="mb-4">
-									• 3-4 sessions per week designed to
+								<Text>
+									• Initial phone/text consultation to discuss
+									the program that works for you
+								</Text>
+								<Text className="mt-4">
+									• 2-4 sessions per week designed to
 									continuously progress your training over the
 									6 week period
 								</Text>
-								<Text className="mb-4">
+								<Text className="mt-4">
 									• Flexible design to ensure a balance with
 									work and personal life
 								</Text>
-								<Text className="mb-4">
+								<Text className="mt-4">
 									• Weekly check-in to maintain consistency
 									and motivation
 								</Text>
-								<Text>
+								<Text className="mt-4">
 									• Active recovery days included FREE to be
 									taken when needed
 								</Text>
+							</div>
+						</Col>
+					</Row>
+					<Row className="justify-content-center py-5">
+						<Col lg="6">
+							<div className="text-center">
+								<table className="table table-bordered">
+									<tr>
+										<td>2 sessions per week</td>
+										<td>£60</td>
+									</tr>
+									<tr>
+										<td>3 sessions per week</td>
+										<td>£66</td>
+									</tr>
+									<tr>
+										<td>4 sessions per week</td>
+										<td>£70</td>
+									</tr>
+								</table>
 							</div>
 						</Col>
 					</Row>

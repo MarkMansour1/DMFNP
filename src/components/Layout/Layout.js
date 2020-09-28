@@ -167,11 +167,12 @@ const Layout = ({ children, pageContext }) => {
 				<div className="site-wrapper overflow-hidden" ref={eleRef}>
 					<Header isDark={gContext.headerDark} />
 					{children}
-
 					<Footer isDark={gContext.footerDark} />
 				</div>
-
 				<ModalVideo />
+				<script
+					src={`https://www.paypal.com/sdk/js?client-id=${process.env.PAYPAL_CLIENTID}`}
+				/>
 			</ThemeProvider>
 		</>
 	);

@@ -30,8 +30,8 @@ export const menuItems = [
 	// 		{ name: "pt", label: "Personal Training" },
 	// 	],
 	// },
-	{
-		name: "programs",
-		label: "Programs",
-	},
+	// {
+	// 	name: "programs",
+	// 	label: "Programs",
+	// },
 ];

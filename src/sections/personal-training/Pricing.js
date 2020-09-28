@@ -177,7 +177,7 @@ const Pricing = () => {
 							<PricingCard>
 								<span className="small-title">4 sessions</span>
 								<h2 className="title mt-3 mb-4">
-									{count === 1 ? "£37" : "£54"}
+									{count === 1 ? "£36" : "£54"}
 									<span className="time"> /session</span>
 								</h2>
 								<ULStyled>
@@ -196,7 +196,7 @@ const Pricing = () => {
 							<PricingCard>
 								<span className="small-title">8 sessions</span>
 								<h2 className="title mt-3 mb-4">
-									{count === 1 ? "£33" : "£50"}
+									{count === 1 ? "£30" : "£50"}
 									<span className="time"> /session</span>
 								</h2>
 								<ULStyled>

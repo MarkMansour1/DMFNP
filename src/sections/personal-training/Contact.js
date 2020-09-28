@@ -83,7 +83,16 @@ const Contact = () => (
 						data-aos-duration="750"
 						data-aos-once="true"
 						data-aos-delay="500">
-						<FormStyled>
+						<FormStyled
+							name="personaltraining"
+							method="POST"
+							action="/thank-you"
+							data-netlify="true">
+							<input
+								type="hidden"
+								name="form-name"
+								value="personaltraining"
+							/>
 							<div className="mb-5 text-center">
 								<Title className="mb-2">Get in touch</Title>
 								<Text>
@@ -92,42 +101,23 @@ const Contact = () => (
 								</Text>
 							</div>
 							<Box mb={3}>
-								<Input type="text" placeholder="Your name" />
+								<Input
+									type="text"
+									name="name"
+									placeholder="Your name"
+								/>
 							</Box>
 							<Box mb={3}>
 								<Input
 									type="email"
+									name="email"
 									placeholder="Email address"
 								/>
 							</Box>
-							{/* <Box mb={4}>
-								<Select
-									id="serviceput"
-									name="serviceput"
-									options={[
-										{
-											value: "",
-											label: "Number of sessions",
-											isDisabled: true,
-										},
-										{
-											value: "single-session",
-											label: "1 session",
-										},
-										{
-											value: "four-sessions",
-											label: "4 sessions",
-										},
-										{
-											value: "eight-sessions",
-											label: "8 sessions",
-										},
-									]}
-								/>
-							</Box> */}
 							<Box mb={4} className="position-relative">
 								<Input
 									as="textarea"
+									name="message"
 									placeholder="Write your message here"
 								/>
 							</Box>

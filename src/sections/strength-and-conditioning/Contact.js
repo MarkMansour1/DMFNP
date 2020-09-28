@@ -80,7 +80,16 @@ const Contact = () => (
 						data-aos-duration="750"
 						data-aos-once="true"
 						data-aos-delay="500">
-						<FormStyled>
+						<FormStyled
+							name="strengthandconditioning"
+							method="POST"
+							action="/thank-you"
+							data-netlify="true">
+							<input
+								type="hidden"
+								name="form-name"
+								value="strengthandconditioning"
+							/>
 							<div className="mb-5 text-center">
 								<Title className="mb-2">Get Started</Title>
 								<Text>
@@ -89,17 +98,23 @@ const Contact = () => (
 								</Text>
 							</div>
 							<Box mb={3}>
-								<Input type="text" placeholder="Your name" />
+								<Input
+									type="text"
+									name="name"
+									placeholder="Your name"
+								/>
 							</Box>
 							<Box mb={3}>
 								<Input
 									type="email"
+									name="email"
 									placeholder="Email address"
 								/>
 							</Box>
 							<Box mb={4} className="position-relative">
 								<Input
 									as="textarea"
+									name="message"
 									placeholder="Write your message here"
 								/>
 							</Box>

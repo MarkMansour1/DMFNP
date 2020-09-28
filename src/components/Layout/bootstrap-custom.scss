@@ -1,7 +1,7 @@
 // Override default variables before the import
 
-$primary: #f04037;
-$secondary: #5454d4;
+$primary: #205dd8;
+$secondary: #7ca2d9;
 $bg: #ffffff;
 $heading: #19191b;
 $text: #696871;
@@ -17,25 +17,25 @@ $headings-font-family: $font-family-base;
 @import "~bootstrap/scss/bootstrap.scss";
 
 .has-offcanvas {
-  width: 100%;
-  height: 100%;
-  // overflow: hidden !important;
+	width: 100%;
+	height: 100%;
+	// overflow: hidden !important;
 }
 
 // Fix for flush list group
 .list-group-flush:first-child,
 .list-group-item:first-child {
-  border-top: 0;
+	border-top: 0;
 }
 
 // Fix for Gallery Lightbox (react-image package)
 .react-images__blanket,
 .react-images__positioner {
-  z-index: 999999 !important;
+	z-index: 999999 !important;
 }
 
 // Fix for Modal
 .modal,
 .modal-backdrop {
-  z-index: 99999 !important;
+	z-index: 99999 !important;
 }
